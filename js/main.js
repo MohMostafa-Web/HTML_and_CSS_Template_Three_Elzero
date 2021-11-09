@@ -47,11 +47,14 @@ const counterInterval = setInterval(downCounter, 500);
 
 
 
-/** Create Animated Width on Scrolling */
+
 const skillsSection = document.querySelector(".skills");
 const progSpans = document.querySelectorAll(".skills .progress");
+const statsSection = document.querySelector(".stats");
+const nums = document.querySelectorAll(".stats .number");
 
 window.onscroll = function () {
+  /** Create Animated Width on Scrolling */
   if (skillsSection.getBoundingClientRect().top <= 10) { // Check if this section is in viewport
     progSpans.forEach(span => {
       span.style.width = span.dataset.percentage; // get width of span from its data-percentage
@@ -61,14 +64,8 @@ window.onscroll = function () {
       span.style.width = 0; // reset width with zero
     });
   }
-};
 
-
-/** Increase Numbers on Scrolling */
-const statsSection = document.querySelector(".stats");
-const nums = document.querySelectorAll(".stats .number");
-
-window.onscroll = function () {
+  /** Increase Numbers on Scrolling */
   if (window.scrollY > statsSection.offsetTop - 10) { // Check if this section reached viewport
     // Loop over nums to make counting
     nums.forEach(num => {
