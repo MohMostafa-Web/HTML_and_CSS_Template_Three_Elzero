@@ -533,10 +533,9 @@ header .main-menu > ul > li .mega-menu .links li a i {
 .features .feature .more-btn {
   display: block;
   width: fit-content;
-  background-image: linear-gradient(to right, #f44036, #f44036);
-  background-repeat: no-repeat;
   background-size: 0% 100%;
-  background-position: left center;
+  background-repeat: no-repeat;
+  background-position: left top;
   margin: 0 auto 30px;
   font-weight: bold;
   font-size: 22px;
